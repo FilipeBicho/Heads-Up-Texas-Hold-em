@@ -1,0 +1,67 @@
+Jogar jogo = new Jogar();
+		Simulador tabela = new Simulador();
+		Estatisticas guardar = new Estatisticas();
+		AvaliarMao avaliar = new AvaliarMao();
+		// Recebe o input do utilizador
+		Scanner user = new Scanner(System.in);
+		System.out.println("BemVindo. Introduza o nome: ");
+		String nome = user.nextLine();
+		
+		
+		
+		// Recebe o input do utilizador
+		Scanner input = new Scanner(System.in);
+		int opcao=0;
+		System.out.println(" ************** SIMULADOR HEADS UP TEXAS HOLD'EM ************");
+		System.out.println("\nEscolha o modo de jogo: ");
+		System.out.println("1. Jogador vs Jogador");
+		System.out.println("2. Jogador vs Computador (bot com apostas certas)");
+		System.out.println("3. Jogador vs Computador (bot agressivo)");
+		System.out.println("4. Jogador vs Computador (bot misto)");
+		System.out.println("5. Jogador vs Computador (bot baseado em probabilidades)");
+		System.out.println("6. Computador (bot certo) vs Computador(bot agressivo)");
+		System.out.println("7. Computador (bot certo) vs Computador(bot misto)");
+		System.out.println("8. Computador (bot certo) vs Computador(bot baseado em probabilidades)");
+		System.out.println("9. Computador (bot agressivo) vs Computador(bot misto)");
+		System.out.println("10. Computador (bot agressivo) vs Computador(bot baseado em probabilidades)");
+		System.out.println("11. Computador (bot misto) vs Computador(bot baseado em probabilidades)");
+		opcao = input.nextInt();
+		
+		switch(opcao)
+		{
+			case 1:
+				jogo.jogadorVSjogador(1);
+				break;
+			case 2:
+				jogo.jogadorVScomputador(2,nome);
+				break;
+			case 3:
+				jogo.jogadorVScomputador(3,nome);
+				break;
+			case 4:
+				jogo.jogadorVScomputador(4,nome);
+				break;
+			case 5:
+				jogo.jogadorVScomputador(5,nome);
+				break;
+			case 6:
+				jogo.computadorVScomputador(6);
+				break;
+			case 7:
+				jogo.computadorVScomputador(7);
+				break;
+			case 8:
+				jogo.computadorVScomputador(8);
+				break;
+			case 9:
+				jogo.computadorVScomputador(9);
+				break;
+			case 10:
+				jogo.computadorVScomputador(10);
+				break;
+			case 11:
+				jogo.computadorVScomputador(11);
+				break;
+			
+			
+		}
